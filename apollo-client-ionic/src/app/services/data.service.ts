@@ -18,7 +18,7 @@ export class DataService {
     console.log('qry', qry);
     return this.apollo.watchQuery<Query>({ query: qry, variables: vars}).valueChanges;
   }
-  // crud qgl - no condition  (EOL can be passed)
+  
   allRows(qryName: string, flds: string[]) { return (gql`
     query { ${ qryName }  { ${ flds.join(' ') } }}`) as DocumentNode;
   }
