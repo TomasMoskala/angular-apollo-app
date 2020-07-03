@@ -1,0 +1,33 @@
+Playground at
+http://test-4233.rostiapp.cz/
+
+query{
+  users{
+    user_id
+    user_name
+  }
+}
+
+
+mutation{
+  register(user_name:"New User"){
+    user_id
+    user_name
+  }
+}
+
+
+mutation{
+  login(user_id:2){
+    user_id
+    user_name
+  }
+}
+
+
+query{
+  me{
+    user_id
+    user_name
+  }
+}

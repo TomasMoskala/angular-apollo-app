@@ -1,0 +1,99 @@
+app@test-4233 ~/app $ npm run build
+
+> typescript-graphql@ build /srv/app
+> npm -s run clean && npm -s run generate && tsc
+
+Environment variables loaded from ./prisma/.env
+
+✔ Generated Prisma Client to ./node_modules/@prisma/client in 113ms
+
+You can now start using Prisma Client in your code:
+
+```
+import { PrismaClient } from '@prisma/client'
+// or const { PrismaClient } = require('@prisma/client')
+
+const prisma = new PrismaClient()
+```
+
+Explore the full API: http://pris.ly/d/client
+
+node_modules/@types/nexus-prisma-typegen/index.d.ts:70:7 - error TS2536: Type 'InputName' cannot be used to index type 'NexusPrismaInputs[ModelName][MethodName]'.
+
+70     ? NexusPrismaInputs[ModelName][MethodName][InputName]
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+node_modules/@types/nexus-prisma-typegen/index.d.ts:132:15 - error TS2344: Type 'GetNexusPrismaInput<ModelName, MethodName, "filtering">' does not satisfy the constraint 'string | number | symbol'.
+  Type 'MethodName extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][MethodName]["filtering"] : never' is not assignable to type 'string | 
+number | symbol'.
+    Type 'NexusPrismaInputs[ModelName][MethodName]["filtering"]' is not assignable to type 'string | number | symbol'.
+      Type 'NexusPrismaInputs[ModelName][string]["filtering"] | NexusPrismaInputs[ModelName][number]["filtering"] | NexusPrismaInputs[ModelName][symbol]["filtering"]' is not assignable to type 'string | number | symbol'.
+        Type 'NexusPrismaInputs[ModelName][string]["filtering"]' is not assignable to type 'string | number | symbol'.
+          Type 'NexusPrismaInputs[ModelName][string]["filtering"]' is not assignable to type 'symbol'.
+            Type 'NexusPrismaInputs[ModelName][MethodName]["filtering"]' is not assignable to type 'symbol'.
+              Type 'unknown extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["filtering"] : never' is 
+not assignable to type 'string | number | symbol'.
+                Type 'NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["filtering"]' is not assignable to type 'string | number | symbol'.
+                  Type 'NexusPrismaInputs[ModelName][string]["filtering"] | NexusPrismaInputs[ModelName][number]["filtering"] | NexusPrismaInputs[ModelName][symbol]["filtering"]' is not assignable to type 'string | number | symbol'.
+                    Type 'NexusPrismaInputs[ModelName][string]["filtering"]' is not assignable to type 'string | number | symbol'.
+                      Type 'NexusPrismaInputs[ModelName][string]["filtering"]' is not assignable to type 'symbol'.
+                        Type 'NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["filtering"]' is not assignable to type 'symbol'.
+                          Type 'unknown extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["filtering"] 
+: never' is not assignable to type 'symbol'.
+                            Type 'MethodName extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][MethodName]["filtering"] : never' is not assignable to type 'symbol'.
+                              Type 'GetNexusPrismaInput<ModelName, MethodName, "filtering">' is not assignable to type 'symbol'.
+                                Type 'MethodName extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][MethodName]["filtering"] : never' is not assignable to type 'symbol'.
+                                  Type 'NexusPrismaInputs[ModelName][MethodName]["filtering"]' is not assignable to type 'symbol'.
+                                    Type 'NexusPrismaInputs[ModelName][string]["filtering"] | NexusPrismaInputs[ModelName][number]["filtering"] | NexusPrismaInputs[ModelName][symbol]["filtering"]' is not assignable to type 'symbol'.
+                                      Type 'NexusPrismaInputs[ModelName][string]["filtering"]' is not assignable to type 'symbol'.
+                                        Type 'unknown extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["filtering"] : never' is not assignable to type 'symbol'.
+                                          Type 'NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["filtering"]' is not assignable to type 'symbol'. 
+                                            Type 'NexusPrismaInputs[ModelName][string]["filtering"] | NexusPrismaInputs[ModelName][number]["filtering"] | NexusPrismaInputs[ModelName][symbol]["filtering"]' is not assignable to type 'symbol'.
+                                              Type 'NexusPrismaInputs[ModelName][string]["filtering"]' is not assignable to type 'symbol'.
+
+132               GetNexusPrismaInput<ModelName, MethodName, 'filtering'>,
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+node_modules/@types/nexus-prisma-typegen/index.d.ts:140:15 - error TS2344: Type 'GetNexusPrismaInput<ModelName, MethodName, "ordering">' does not satisfy the constraint 'string | number | symbol'.
+  Type 'MethodName extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][MethodName]["ordering"] : never' is not assignable to type 'string | number | symbol'.
+    Type 'NexusPrismaInputs[ModelName][MethodName]["ordering"]' is not assignable to type 'string | number | symbol'.
+      Type 'NexusPrismaInputs[ModelName][string]["ordering"] | NexusPrismaInputs[ModelName][number]["ordering"] | NexusPrismaInputs[ModelName][symbol]["ordering"]' is not assignable to type 'string | number | symbol'.
+        Type 'NexusPrismaInputs[ModelName][string]["ordering"]' is not assignable to type 'string | number | symbol'.
+          Type 'NexusPrismaInputs[ModelName][string]["ordering"]' is not assignable to type 'symbol'.
+            Type 'NexusPrismaInputs[ModelName][MethodName]["ordering"]' is not assignable to type 'symbol'.
+              Type 'unknown extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["ordering"] : never' is not assignable to type 'string | number | symbol'.
+                Type 'NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["ordering"]' is not assignable to type 'string | number | symbol'.
+                  Type 'NexusPrismaInputs[ModelName][string]["ordering"] | NexusPrismaInputs[ModelName][number]["ordering"] | NexusPrismaInputs[ModelName][symbol]["ordering"]' is not assignable to type 'string | number | symbol'.
+                    Type 'NexusPrismaInputs[ModelName][string]["ordering"]' is not assignable to type 'string | number | symbol'.
+                      Type 'NexusPrismaInputs[ModelName][string]["ordering"]' is not assignable to type 'symbol'.
+                        Type 'NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["ordering"]' is not assignable to type 'symbol'.
+                          Type 'unknown extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["ordering"] : never' is not assignable to type 'symbol'.
+                            Type 'MethodName extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][MethodName]["ordering"] : never' is not assignable to type 'symbol'.
+                              Type 'GetNexusPrismaInput<ModelName, MethodName, "ordering">' is not assignable to type 'symbol'.
+                                Type 'MethodName extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][MethodName]["ordering"] : never' is not 
+assignable to type 'symbol'.
+                                  Type 'NexusPrismaInputs[ModelName][MethodName]["ordering"]' is not assignable to type 'symbol'.
+                                    Type 'NexusPrismaInputs[ModelName][string]["ordering"] | NexusPrismaInputs[ModelName][number]["ordering"] | NexusPrismaInputs[ModelName][symbol]["ordering"]' is not assignable to type 'symbol'.
+                                      Type 'NexusPrismaInputs[ModelName][string]["ordering"]' is not assignable to type 'symbol'.
+                                        Type 'unknown extends keyof NexusPrismaInputs[ModelName] ? NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["ordering"] : never' is not assignable to type 'symbol'.
+                                          Type 'NexusPrismaInputs[ModelName][keyof NexusPrismaInputs[ModelName]]["ordering"]' is not assignable to type 'symbol'.  
+                                            Type 'NexusPrismaInputs[ModelName][string]["ordering"] | NexusPrismaInputs[ModelName][number]["ordering"] | NexusPrismaInputs[ModelName][symbol]["ordering"]' is not assignable to type 'symbol'.
+                                              Type 'NexusPrismaInputs[ModelName][string]["ordering"]' is not assignable to type 'symbol'.
+
+140               GetNexusPrismaInput<ModelName, MethodName, 'ordering'>,
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Found 3 errors.
+
+npm ERR! code ELIFECYCLE
+npm ERR! errno 2
+npm ERR! typescript-graphql@ build: `npm -s run clean && npm -s run generate && tsc`
+npm ERR! Exit status 2
+npm ERR!
+npm ERR! Failed at the typescript-graphql@ build script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /srv/.npm/_logs/2020-07-03T08_15_58_970Z-debug.log
+app@test-4233 ~/app $ 

@@ -1,0 +1,7 @@
+{
+  "name": "gql-apl-cli",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
