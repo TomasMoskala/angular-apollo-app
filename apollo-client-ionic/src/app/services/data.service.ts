@@ -19,13 +19,17 @@ export class DataService {
     return this.apollo.watchQuery<Query>({ query: qry, variables: vars}).valueChanges;
   }
   
-  allRows(qryName: string, flds: string[]) { return (gql`
-    query { ${ qryName }  { ${ flds.join(' ') } }}`) as DocumentNode;
+  allRows(qryName: string, flds: string[]) {
+    return (gql
+      `query { ${ qryName }  { ${ flds.join(' ') } }}`
+    ) as DocumentNode;
   }
 
-  idRow(qryName: string, idFld: string, idVal: number, flds: any, isMut?: boolean) { return (gql`
-    ${ isMut ? 'mutation' : 'query'}  { ${ qryName } (where: { ${ idFld }: ${ idVal } })
-      { ${ flds.join(' ') }}}`) as DocumentNode;
+  idRow(qryName: string, idFld: string, idVal: number, flds: any, isMut?: boolean) { 
+    return (gql
+      `${ isMut ? 'mutation' : 'query'}  { ${ qryName } (where: { ${ idFld }: ${ idVal } })
+      { ${ flds.join(' ') }}}`
+    ) as DocumentNode;
   }
 
   muteQry(qry: DocumentNode, vars?: R): Observable<FetchResult<Query>> {
