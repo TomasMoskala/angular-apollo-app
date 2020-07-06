@@ -1,5 +1,6 @@
 # angular-apollo-app
 Apollo server and client in Angular typescript with Ionic
+
 testing server playground running at
 http://test-4233.rostiapp.cz/
 e.g.
