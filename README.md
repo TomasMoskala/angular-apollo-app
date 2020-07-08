@@ -10,3 +10,4 @@ query{
     user_name
   }
 }
+Currently working in browser using "ionic serve" but not on a device using Android studio
